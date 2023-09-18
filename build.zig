@@ -16,6 +16,14 @@ pub fn build(b: *std.Build) void {
     lib.addIncludePath(.{ .path = "./include" });
     lib.addCSourceFiles(&c_source_files, &c_flags);
 
+    lib.defineCMacro("FT_DISABLE_ZLIB", "TRUE");
+    lib.defineCMacro("FT_DISABLE_PNG", "TRUE");
+    lib.defineCMacro("FT_DISABLE_HARFBUZZ", "TRUE");
+    lib.defineCMacro("FT_DISABLE_BZIP2", "TRUE");
+    lib.defineCMacro("FT_DISABLE_BROTLI", "TRUE");
+
+    lib.defineCMacro("FT2_BUILD_LIBRARY", "TRUE");
+
     const t = lib.target_info.target;
     switch (t.os.tag) {
         .windows => {
