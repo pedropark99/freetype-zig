@@ -1,2 +1,0 @@
-0
-56116 281474977301867 1691135042000000000 1b0d1c80b5d285db3599ef03d646eb46 0 C:\Users\pedro\AppData\Roaming\Code\User\globalStorage\ziglang.vscode-zig\zig_install\lib\libc\mingw\lib-common\ntdll.def.in
